@@ -1,0 +1,5 @@
+name: astrbot_plugin_home_assistant
+display_name: Home Assistant 智能家居
+desc: 控制 Home Assistant 设备，支持灯光和开关
+version: 1.0.0
+author: Neko
