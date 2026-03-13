@@ -1,0 +1,39 @@
+{
+  "ha_url": {
+    "description": "Home Assistant 地址",
+    "type": "string",
+    "default": "http://127.0.0.1:8123",
+    "hint": "Home Assistant 的 Web 访问地址，支持 IP 或域名。例如：http://192.168.1.100:8123"
+  },
+  "ha_token": {
+    "description": "长期访问令牌",
+    "type": "string",
+    "default": "自行修改",
+    "hint": "Home Assistant 长期访问令牌。获取方式：Web界面 → 用户头像 → 安全 → 长期访问令牌 → 创建令牌",
+    "obvious_hint": true
+  },
+  "timeout": {
+    "description": "请求超时（秒）",
+    "type": "int",
+    "default": 10,
+    "hint": "与 Home Assistant API 通信的超时时间，网络较慢时可适当增加"
+  },
+  "enable_light_commands": {
+    "description": "启用灯光命令",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，用户可使用 /开灯 /关灯 /调光 /灯光列表 等命令控制灯光设备。关闭后这些命令将返回“已禁用”提示。"
+  },
+  "enable_switch_commands": {
+    "description": "启用开关命令",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，用户可使用 /打开 /关闭 /开关列表 等命令控制开关设备。关闭后这些命令将返回“已禁用”提示。"
+  },
+  "enable_llm_tools": {
+    "description": "启用 LLM 工具",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，AI 可主动调用工具控制设备。例如用户说“帮我开灯”时，AI 会自动调用工具执行操作。关闭后 AI 无法主动控制设备，只能提示用户使用命令方式。"
+  }
+}
